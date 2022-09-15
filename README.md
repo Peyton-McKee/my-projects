@@ -1,5 +1,5 @@
 # my-projects
-A repository containing the projects I've worked on both in class and outside of class
+A repository containing the projects I've worked on both in class and on my own.
 
 Checkers is a python project that I created in Processing 2 for my AP Computer Science Performance Exam. This was the first time I really decided to explore the capababilities of processing and went outside the curriculum to understand more complex data structures within python. The first time I created a checkers game was in an intro to C++ class and was forced to use entirely text(emojis) to complete it so this project definitely felt more concrete and polished than my previous attempt. 
 
