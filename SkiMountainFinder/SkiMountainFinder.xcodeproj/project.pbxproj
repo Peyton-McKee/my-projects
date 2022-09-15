@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		151CB836278E1BD600DADD75 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151CB835278E1BD600DADD75 /* WebViewController.swift */; };
+		15240882278F0170000E4FBC /* WeatherRatingCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15240881278F0170000E4FBC /* WeatherRatingCalculator.swift */; };
+		15240884278F4C56000E4FBC /* AnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15240883278F4C56000E4FBC /* AnimationManager.swift */; };
+		1524088627908306000E4FBC /* WebScraping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1524088527908306000E4FBC /* WebScraping.swift */; };
+		15240889279202D8000E4FBC /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 15240888279202D8000E4FBC /* SwiftSoup */; };
+		1592EFE127B09BCF00CB31AE /* TapRecogonizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1592EFE027B09BCF00CB31AE /* TapRecogonizer.swift */; };
+		454250942760FD18002CF259 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454250932760FD18002CF259 /* AppDelegate.swift */; };
+		454250962760FD19002CF259 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454250952760FD18002CF259 /* SceneDelegate.swift */; };
+		454250982760FD19002CF259 /* FinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454250972760FD19002CF259 /* FinderViewController.swift */; };
+		4542509B2760FD19002CF259 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 454250992760FD19002CF259 /* Main.storyboard */; };
+		4542509D2760FD21002CF259 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4542509C2760FD21002CF259 /* Assets.xcassets */; };
+		454250A02760FD21002CF259 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4542509E2760FD21002CF259 /* LaunchScreen.storyboard */; };
+		454250A82760FE5D002CF259 /* SearchMountainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454250A72760FE5D002CF259 /* SearchMountainViewController.swift */; };
+		454250AA2760FE7C002CF259 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454250A92760FE7C002CF259 /* PreferencesViewController.swift */; };
+		454250AC2761006B002CF259 /* RecommenderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454250AB2761006B002CF259 /* RecommenderTableViewController.swift */; };
+		45DD0B6B2763DF04009B0FD4 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DD0B6A2763DF04009B0FD4 /* Weather.swift */; };
+		45DD0B6D27645557009B0FD4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DD0B6C27645556009B0FD4 /* MapViewController.swift */; };
+		45DD0B6F276457D5009B0FD4 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DD0B6E276457D5009B0FD4 /* LocationManager.swift */; };
+		45DD0B712764ECC4009B0FD4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DD0B702764ECC4009B0FD4 /* SearchViewController.swift */; };
+		45DD0B7727715923009B0FD4 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DD0B7627715923009B0FD4 /* CustomTableViewCell.swift */; };
+		45DD0B7927716011009B0FD4 /* APIFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DD0B7827716011009B0FD4 /* APIFinder.swift */; };
+		B8407F5C27765DAB00A03DA8 /* FinderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8407F5B27765DAB00A03DA8 /* FinderTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		151CB835278E1BD600DADD75 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		15240881278F0170000E4FBC /* WeatherRatingCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRatingCalculator.swift; sourceTree = "<group>"; };
+		15240883278F4C56000E4FBC /* AnimationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationManager.swift; sourceTree = "<group>"; };
+		1524088527908306000E4FBC /* WebScraping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebScraping.swift; sourceTree = "<group>"; };
+		1592EFE027B09BCF00CB31AE /* TapRecogonizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapRecogonizer.swift; sourceTree = "<group>"; };
+		454250902760FD18002CF259 /* SkiMountainFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkiMountainFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		454250932760FD18002CF259 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		454250952760FD18002CF259 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		454250972760FD19002CF259 /* FinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderViewController.swift; sourceTree = "<group>"; };
+		4542509A2760FD19002CF259 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4542509C2760FD21002CF259 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4542509F2760FD21002CF259 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		454250A12760FD21002CF259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		454250A72760FE5D002CF259 /* SearchMountainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMountainViewController.swift; sourceTree = "<group>"; };
+		454250A92760FE7C002CF259 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		454250AB2761006B002CF259 /* RecommenderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommenderTableViewController.swift; sourceTree = "<group>"; };
+		45DD0B6A2763DF04009B0FD4 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		45DD0B6C27645556009B0FD4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		45DD0B6E276457D5009B0FD4 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		45DD0B702764ECC4009B0FD4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		45DD0B7627715923009B0FD4 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		45DD0B7827716011009B0FD4 /* APIFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFinder.swift; sourceTree = "<group>"; };
+		B8407F5B27765DAB00A03DA8 /* FinderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4542508D2760FD18002CF259 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15240889279202D8000E4FBC /* SwiftSoup in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		151CB831278E1A3600DADD75 /* NetworkAccessingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				45DD0B7827716011009B0FD4 /* APIFinder.swift */,
+				45DD0B6A2763DF04009B0FD4 /* Weather.swift */,
+				1524088527908306000E4FBC /* WebScraping.swift */,
+			);
+			path = NetworkAccessingFiles;
+			sourceTree = "<group>";
+		};
+		151CB832278E1A5B00DADD75 /* TableViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				45DD0B7627715923009B0FD4 /* CustomTableViewCell.swift */,
+				B8407F5B27765DAB00A03DA8 /* FinderTableViewController.swift */,
+				454250AB2761006B002CF259 /* RecommenderTableViewController.swift */,
+			);
+			path = TableViewControllers;
+			sourceTree = "<group>";
+		};
+		151CB833278E1B6800DADD75 /* MapsAndLocationManagement */ = {
+			isa = PBXGroup;
+			children = (
+				45DD0B6C27645556009B0FD4 /* MapViewController.swift */,
+				45DD0B6E276457D5009B0FD4 /* LocationManager.swift */,
+				45DD0B702764ECC4009B0FD4 /* SearchViewController.swift */,
+			);
+			path = MapsAndLocationManagement;
+			sourceTree = "<group>";
+		};
+		151CB834278E1BB100DADD75 /* WebViewManagement */ = {
+			isa = PBXGroup;
+			children = (
+				151CB835278E1BD600DADD75 /* WebViewController.swift */,
+			);
+			path = WebViewManagement;
+			sourceTree = "<group>";
+		};
+		1592EFE227B0A6C400CB31AE /* StartingViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				454250972760FD19002CF259 /* FinderViewController.swift */,
+				454250A72760FE5D002CF259 /* SearchMountainViewController.swift */,
+				454250A92760FE7C002CF259 /* PreferencesViewController.swift */,
+			);
+			path = StartingViewControllers;
+			sourceTree = "<group>";
+		};
+		454250872760FD18002CF259 = {
+			isa = PBXGroup;
+			children = (
+				454250922760FD18002CF259 /* SkiMountainFinder */,
+				454250912760FD18002CF259 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		454250912760FD18002CF259 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				454250902760FD18002CF259 /* SkiMountainFinder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		454250922760FD18002CF259 /* SkiMountainFinder */ = {
+			isa = PBXGroup;
+			children = (
+				1592EFE227B0A6C400CB31AE /* StartingViewControllers */,
+				151CB834278E1BB100DADD75 /* WebViewManagement */,
+				151CB833278E1B6800DADD75 /* MapsAndLocationManagement */,
+				151CB832278E1A5B00DADD75 /* TableViewControllers */,
+				151CB831278E1A3600DADD75 /* NetworkAccessingFiles */,
+				454250992760FD19002CF259 /* Main.storyboard */,
+				1592EFE027B09BCF00CB31AE /* TapRecogonizer.swift */,
+				15240883278F4C56000E4FBC /* AnimationManager.swift */,
+				15240881278F0170000E4FBC /* WeatherRatingCalculator.swift */,
+				454250932760FD18002CF259 /* AppDelegate.swift */,
+				454250952760FD18002CF259 /* SceneDelegate.swift */,
+				4542509C2760FD21002CF259 /* Assets.xcassets */,
+				4542509E2760FD21002CF259 /* LaunchScreen.storyboard */,
+				454250A12760FD21002CF259 /* Info.plist */,
+			);
+			path = SkiMountainFinder;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4542508F2760FD18002CF259 /* SkiMountainFinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 454250A42760FD21002CF259 /* Build configuration list for PBXNativeTarget "SkiMountainFinder" */;
+			buildPhases = (
+				4542508C2760FD18002CF259 /* Sources */,
+				4542508D2760FD18002CF259 /* Frameworks */,
+				4542508E2760FD18002CF259 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SkiMountainFinder;
+			packageProductDependencies = (
+				15240888279202D8000E4FBC /* SwiftSoup */,
+			);
+			productName = SkiMountainFinder;
+			productReference = 454250902760FD18002CF259 /* SkiMountainFinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		454250882760FD18002CF259 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					4542508F2760FD18002CF259 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 4542508B2760FD18002CF259 /* Build configuration list for PBXProject "SkiMountainFinder" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 454250872760FD18002CF259;
+			packageReferences = (
+				15240887279202D8000E4FBC /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
+			productRefGroup = 454250912760FD18002CF259 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4542508F2760FD18002CF259 /* SkiMountainFinder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4542508E2760FD18002CF259 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				454250A02760FD21002CF259 /* LaunchScreen.storyboard in Resources */,
+				4542509D2760FD21002CF259 /* Assets.xcassets in Resources */,
+				4542509B2760FD19002CF259 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4542508C2760FD18002CF259 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15240882278F0170000E4FBC /* WeatherRatingCalculator.swift in Sources */,
+				1592EFE127B09BCF00CB31AE /* TapRecogonizer.swift in Sources */,
+				B8407F5C27765DAB00A03DA8 /* FinderTableViewController.swift in Sources */,
+				45DD0B7927716011009B0FD4 /* APIFinder.swift in Sources */,
+				15240884278F4C56000E4FBC /* AnimationManager.swift in Sources */,
+				1524088627908306000E4FBC /* WebScraping.swift in Sources */,
+				45DD0B712764ECC4009B0FD4 /* SearchViewController.swift in Sources */,
+				454250AA2760FE7C002CF259 /* PreferencesViewController.swift in Sources */,
+				45DD0B7727715923009B0FD4 /* CustomTableViewCell.swift in Sources */,
+				454250AC2761006B002CF259 /* RecommenderTableViewController.swift in Sources */,
+				454250982760FD19002CF259 /* FinderViewController.swift in Sources */,
+				454250942760FD18002CF259 /* AppDelegate.swift in Sources */,
+				454250A82760FE5D002CF259 /* SearchMountainViewController.swift in Sources */,
+				45DD0B6B2763DF04009B0FD4 /* Weather.swift in Sources */,
+				454250962760FD19002CF259 /* SceneDelegate.swift in Sources */,
+				151CB836278E1BD600DADD75 /* WebViewController.swift in Sources */,
+				45DD0B6D27645557009B0FD4 /* MapViewController.swift in Sources */,
+				45DD0B6F276457D5009B0FD4 /* LocationManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		454250992760FD19002CF259 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4542509A2760FD19002CF259 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4542509E2760FD21002CF259 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4542509F2760FD21002CF259 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		454250A22760FD21002CF259 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		454250A32760FD21002CF259 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		454250A52760FD21002CF259 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9NAZ262ZU8;
+				INFOPLIST_FILE = SkiMountainFinder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.McKee.SkiMountainFinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		454250A62760FD21002CF259 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9NAZ262ZU8;
+				INFOPLIST_FILE = SkiMountainFinder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.McKee.SkiMountainFinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4542508B2760FD18002CF259 /* Build configuration list for PBXProject "SkiMountainFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				454250A22760FD21002CF259 /* Debug */,
+				454250A32760FD21002CF259 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		454250A42760FD21002CF259 /* Build configuration list for PBXNativeTarget "SkiMountainFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				454250A52760FD21002CF259 /* Debug */,
+				454250A62760FD21002CF259 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		15240887279202D8000E4FBC /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		15240888279202D8000E4FBC /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 15240887279202D8000E4FBC /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 454250882760FD18002CF259 /* Project object */;
+}
