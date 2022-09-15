@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <link rel="stylesheet" href="styles.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script>
+   function setNumCart() {
+      var big = document.getElementsByClassName('centered')[1]
+      var small = document.getElementsByClassName('centered')[0]
+      big.textContent = localStorage.getItem('numCart')
+      small.textContent = localStorage.getItem('numCart')
+   }
+   </script>
+   <title>THEDon543</title>
+</head>
+<body onload="setNumCart()">
+   <div class="header">
+      <div class="topnav-left">
+         <a href="index.html"><img src="images/DonLogo.png" alt="don logo" style="width: 100%;"></a>
+         <h1 style="color: rgb(100, 94, 94); ">THEDon543</h1>
+      </div>
+      <div>
+         <div class="topnav-right">
+            <a href="index.html" style="color: rgb(202, 202, 202);">Welcome</a>
+            <a href="apparel.html" style="color: rgb(130, 129, 129);">The Drip</a>
+            <a href="aboutme.html" style="color: rgb(130, 129, 129);">The Don Squad</a>
+            <a href="theinfo.html" style="color: rgb(130, 129, 129);">The Info</a>
+            <div class="cart-container-1">
+               <a href="cart.html"><img class="cart" src='images/shopping-cart-icon-vector-12712482.png' alt="" width="100%"
+                     style="object-fit: cover; display: inline-block;"></a>
+               <a href="cart.html" class="centered"></a>
+            
+            </div>
+            <a target="_blank" href="https://www.instagram.com/accounts/login/?next=/thedon543yt/"><img width="25"
+                  src="images/Instagram_logo_2016.svg.png" alt="instagram"></a>
+            <a href="https://www.youtube.com/c/THEdon543"><img src="images/youtube.png" alt="youtube logo" width="25"></a>
+         </div>
+         <div class="small-topnav-right">
+            <div class="cart-container">
+               <a href="cart.html"><img class="cart" src='images/shopping-cart-icon-vector-12712482.png' alt="" height="50px"
+                  style="object-fit: cover; display: inline-block;"></a>
+               <a href="cart.html" class="centered"></a>
+         
+         </div>
+         <div class="dropdown">
+            <button class="dropbtn">More</button>
+            <div class="dropdown-content">
+               <a href="index.html" style="color: rgb(202, 202, 202);">Welcome</a>
+               <a href="apparel.html" style="color: rgb(130, 129, 129);">The Drip</a>
+               <a href="aboutme.html" style="color: rgb(130, 129, 129);">The Don Squad</a>
+               <a href="theinfo.html" style="color: rgb(130, 129, 129);">The Info</a>
+               <a target="_blank" href="https://www.instagram.com/accounts/login/?next=/thedon543yt/"><img width="25"
+                     src="images/Instagram_logo_2016.svg.png" alt="instagram"></a>
+               <a href="https://www.youtube.com/c/THEdon543"><img src="images/youtube.png" alt="youtube logo" width="25"></a>
+            </div>
+         </div>
+         </div>
+      </div>
+   </div>
+   <br>
+   <div class="container">
+      <img src="images/TheDonLargeLogo.png" alt="THEDon543 DonLogo" style="width:100%;">
+      
+   </div>
+   <div class="second">
+      <h1 style="text-align: center;">Welcome</h1>
+      <br>
+      <p style="max-width: 800px; margin: 0 auto;" >Welcome to the website! I am a YouTuber who posts high-level Call of Duty gameplay, montages, and tutorials on how to
+      improve your own play. My main goal is to portray positive vibes - we're leading the anti-toxic movement in Call of Duty! I love to engage with my fans and respond to every comment on my videos, so don't hesitate to reach out! <br><br>
+      On this website you'll find some awesome merchandise that we make 100% in house! Be sure to head on over to "The Drip" to check it all out. There is NO SHIPPING COST on any order - you guys have been amazing supporting the
+      channel and we want to return the favor by getting as much merch out as possible!</p>
+      <br>
+   </div>
+   <div class="third">
+      <h2>THEdon543 Apparel</h2>
+      <div style="text-align:center">
+         <a href="apparel.html" style="color: white; ">The Merch -></a></div>
+      
+   </div>
+   
+   <script>
+      var divs = $('.modal'), limit = 150
+      $(window).on('scroll', function()
+      {
+         var st = $(this).scrollTop();
+         if(st <= limit){
+            divs.css({"background-color": "rgba(32, 32, 32, 1)"});
+         }
+      });
+   </script>
+</body>
+</html>

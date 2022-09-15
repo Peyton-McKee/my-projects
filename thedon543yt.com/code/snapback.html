@@ -1,0 +1,116 @@
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles.css">
+   <title>snapback</title>
+   <script>
+      function changePhoto(url) {
+         document.getElementById("mainPhoto").src = url;
+      }
+   </script>
+   <script>
+      function setNumCart() {
+         var big = document.getElementsByClassName('centered')[1]
+         var small = document.getElementsByClassName('centered')[0]
+         big.textContent = localStorage.getItem('numCart')
+         small.textContent = localStorage.getItem('numCart')
+      }
+   </script>
+   <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body style="color: white;" onload="setNumCart()">
+   <img class="bg" src="images/DonLogo.png" alt="logo">
+   <div class="header">
+      <div class="topnav-left">
+         <a href="index.html"><img src="images/DonLogo.png" alt="don logo" style="width: 100%;"></a>
+         <h1 style="color: rgb(100, 94, 94); ">THEDon543</h1>
+      </div>
+      <div>
+         <div class="topnav-right">
+            <a href="index.html" style="color: rgb(130, 129, 129);">Welcome</a>
+            <a href="apparel.html" style="color: rgb(202, 202, 202);">The Drip</a>
+            <a href="aboutme.html" style="color: rgb(130, 129, 129);">The Don Squad</a>
+            <a href="theinfo.html" style="color: rgb(130, 129, 129);">The Info</a>
+            <div class="cart-container-1">
+               <a href="cart.html"><img class="cart" src='images/shopping-cart-icon-vector-12712482.png' alt=""
+                     width="100%" style="object-fit: cover; display: inline-block;"></a>
+               <a href="cart.html" class="centered"></a>
+   
+            </div>
+            <a target="_blank" href="https://www.instagram.com/accounts/login/?next=/thedon543yt/"><img width="25"
+                  src="images/Instagram_logo_2016.svg.png" alt="instagram"></a>
+            <a href="https://www.youtube.com/c/THEdon543"><img src="images/youtube.png" alt="youtube logo" width="25"></a>
+         </div>
+         <div class="small-topnav-right">
+            <div class="cart-container">
+               <a href="cart.html"><img class="cart" src='images/shopping-cart-icon-vector-12712482.png' alt=""
+                     height="50px" style="object-fit: cover; display: inline-block;"></a>
+               <a href="cart.html" class="centered"></a>
+   
+            </div>
+            <div class="dropdown">
+               <button class="dropbtn">More</button>
+               <div class="dropdown-content">
+                  <a href="index.html" style="color: rgb(130, 129, 129);">Welcome</a>
+                  <a href="apparel.html" style="color: rgb(202, 202, 202);">The Drip</a>
+                  <a href="aboutme.html" style="color: rgb(130, 129, 129);">The Don Squad</a>
+                  <a href="theinfo.html" style="color: rgb(130, 129, 129);">The Info</a>
+                  <a target="_blank" href="https://www.instagram.com/accounts/login/?next=/thedon543yt/"><img width="25"
+                        src="images/Instagram_logo_2016.svg.png" alt="instagram"></a>
+                  <a href="https://www.youtube.com/c/THEdon543"><img src="images/youtube.png" alt="youtube logo"
+                        width="25"></a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <br><br><br>
+
+   <div class="apparel-container">
+      <div class="apparel-picker">
+         <ul >
+            <li>
+               <a href="#" onclick="changePhoto('images/snapback.jpg')">
+                  <img src="images/snapback.jpg" alt="black snapback"
+                  style="object-fit: cover; height: 100%; width: 100%;">
+               </a>
+            </li>
+            <li>
+               <a href="#" onclick="changePhoto('images/purpleSnapback.jpg')">
+                  <img src="images/purpleSnapback.jpg" alt="purple snapback"
+                  style="object-fit: cover; width: 100%; height: 100%; ">
+               </a>
+            </li>
+         </ul>
+      </div>
+      <div class="apparel-bigImage">
+         <img src="images/snapback.jpg" alt="black snapback" style="width: 100%;" id="mainPhoto">
+      </div>
+      <div class="apparel-description">
+         <h1>THE TD543 Snapback</h1>
+         <p style="text-align: left;">The Hat that INSTANTLY DOUBLES Your K/D...
+         </p>
+         <h4 style="text-align: left;">Choose a variant:</h4>
+         <div style="display: flex; ">
+            <select name="color" id="color" style="display: inline-block;">
+               <option value=""></option>
+               <option value="black">Black</option>
+               <option value="purple">Purple</option>
+            </select>
+         </div>
+         <h3>$19.99</h3>
+         <div style="text-align: center;">
+            <p class="select-another"></p>
+            <button class="cart-button" onclick="checkSnapbackValue('images/snapback.jpg', '19.99', 'snapback')">Add To Cart</button>
+         </div>
+
+      </div>
+   </div>
+<br><br><br>
+</body>
+
+</html>

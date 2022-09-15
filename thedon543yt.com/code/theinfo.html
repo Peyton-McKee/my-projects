@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="styles.css">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>The Info</title>
+   <script>
+      function setNumCart() {
+         var big = document.getElementsByClassName('centered')[1]
+         var small = document.getElementsByClassName('centered')[0]
+         big.textContent = localStorage.getItem('numCart')
+         small.textContent = localStorage.getItem('numCart')
+      }
+   </script>
+</head>
+<body onload="setNumCart()">
+      <div class="header">
+         <div class="topnav-left">
+            <a href="index.html"><img src="images/DonLogo.png" alt="don logo" style="width: 100%;"></a>
+            <h1 style="color: rgb(100, 94, 94); ">THEDon543</h1>
+         </div>
+         <div>
+            <div class="topnav-right">
+               <a href="index.html" style="color: rgb(130, 129, 129);">Welcome</a>
+               <a href="apparel.html" style="color: rgb(130, 129, 129);">The Drip</a>
+               <a href="aboutme.html" style="color: rgb(130, 129, 129);">The Don Squad</a>
+               <a href="theinfo.html" style="color: rgb(202, 202, 202);">The Info</a>
+               <div class="cart-container-1">
+                  <a href="cart.html"><img class="cart" src='images/shopping-cart-icon-vector-12712482.png' alt=""
+                        width="100%" style="object-fit: cover; display: inline-block;"></a>
+                  <a href="cart.html" class="centered"></a>
+      
+               </div>
+               <a target="_blank" href="https://www.instagram.com/accounts/login/?next=/thedon543yt/"><img width="25"
+                     src="images/Instagram_logo_2016.svg.png" alt="instagram"></a>
+               <a href="https://www.youtube.com/c/THEdon543"><img src="images/youtube.png" alt="youtube logo" width="25"></a>
+            </div>
+            <div class="small-topnav-right">
+               <div class="cart-container">
+                  <a href="cart.html"><img class="cart" src='images/shopping-cart-icon-vector-12712482.png' alt=""
+                        height="50px" style="object-fit: cover; display: inline-block;"></a>
+                  <a href="cart.html" class="centered"></a>
+      
+               </div>
+               <div class="dropdown">
+                  <button class="dropbtn">More</button>
+                  <div class="dropdown-content">
+                     <a href="index.html" style="color: rgb(130, 129, 129);">Welcome</a>
+                     <a href="apparel.html" style="color: rgb(130, 129, 129);">The Drip</a>
+                     <a href="aboutme.html" style="color: rgb(130, 129, 129);">The Don Squad</a>
+                     <a href="theinfo.html" style="color: rgb(202, 202, 202);">The Info</a>
+                     <a target="_blank" href="https://www.instagram.com/accounts/login/?next=/thedon543yt/"><img width="25"
+                           src="images/Instagram_logo_2016.svg.png" alt="instagram"></a>
+                     <a href="https://www.youtube.com/c/THEdon543"><img src="images/youtube.png" alt="youtube logo"
+                           width="25"></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <br>
+      <br>
+   <div class="second" style="height: 75%; width: 100%">
+      <h2>CONTACT US</h2>
+      <h4 style="text-align: left;">Youtube</h4>
+      <a href="https://www.youtube.com/channel/UCPKTWJrCrvy8GUe3zhtG_Ng">THEdon543</a>
+      <h4 style="text-align: left;">Instagram</h4>
+      <a href="https://www.instagram.com/thedon543yt/">@thedon543yt</a>
+      <h4 style="text-align: left;">Email</h4>
+      <p style="text-align: left;">thedon543yt@gmail.com</p>
+   </div>
+</body>
+</html>

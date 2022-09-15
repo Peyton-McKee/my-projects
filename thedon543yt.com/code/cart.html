@@ -1,0 +1,316 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles.css">
+   <title>Shopping Cart</title>
+   <!-- Bootstrap CSS -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+   <script>
+      function generateTable() {
+            // get the reference for the body
+            var body = document.getElementsByTagName("body")[0];
+
+            // creates a <table> element and a <tbody> element
+            var tbl = document.createElement("table");
+            var tblBody = document.createElement("tbody");
+            var json = JSON.parse(localStorage.getItem('cartItems'))
+            var mytotal = 0
+            // creating all cells
+            for (var i = 0; i < json.length; i++) {
+               // creates a table row
+               var row = document.createElement("tr");
+               for (var j = 0; j < 3; j++) {
+                  var cell = document.createElement("td");
+                  
+                  if(i === 0)
+                  {
+                     if(j === 0){
+                        var header1 = document.createElement('th')
+                        header1.textContent = "Product"
+                        cell.appendChild(header1)
+                     }
+                     if(j === 1){
+                        var header2 = document.createElement('th')
+                        header2.textContent = "Quantity"
+                        cell.appendChild(header2)
+                     }
+                     if(j === 2 )
+                     {
+                        var header3 = document.createElement('th')
+                        header3.textContent = "Price"
+                        cell.appendChild(header3)
+                     }
+                  }
+                  
+                  if(j === 0)
+                  {
+                     cell.setAttribute('class', 'description')
+                     const img = document.createElement("img")
+                     const imgSrc = json[i].imgSrc
+                     img.src = imgSrc
+                     var description = document.createTextNode("Color: " + json[i].color + ", Size: " + json[i].size + ", Logo Design: " + json[i].logoDesign)
+                     var cellText = document.createElement('p')
+                     cellText.textContent = ("Price: $" + json[i].price)
+                     cellText.style = "text-align: left;"
+                     cellText.setAttribute('class', 'originalPrice')
+                     cell.appendChild(img)
+                     cell.appendChild(description)
+                     cell.appendChild(cellText)
+                     
+                  }
+                  if (j === 1)
+                  {
+                     var amount = document.createElement('input')
+                     amount.setAttribute('type', 'number')
+                     amount.setAttribute('value', '1')
+                     amount.setAttribute('class', 'inputButton')
+                     amount.setAttribute('min', '1')
+                     var remove = document.createElement('button')
+                     remove.setAttribute('class', 'removeButton')
+                     remove.textContent = 'Remove'
+                     var br = document.createElement('br')
+                     remove.style = "color: red; background: none;"
+                     cell.appendChild(amount)
+                     cell.append(br)
+                     cell.appendChild(remove)
+                  }
+                  if (j === 2)
+                  {
+                     cell.setAttribute('class', 'pricetd')
+                     var price = document.createElement('p')
+                     price.textContent = json[i].price
+                     price.setAttribute('class', 'price')
+                     cell.appendChild(price)
+                     mytotal += parseFloat(json[i].price)
+                  }
+                  row.appendChild(cell);
+               }
+               
+               // add the row to the end of the table body
+               tblBody.appendChild(row);
+            }
+
+            // put the <tbody> in the <table>
+            tbl.appendChild(tblBody);
+            // appends <table> into <body>
+            body.appendChild(tbl);
+            // sets the border attribute of tbl to 2;
+            tbl.setAttribute("border", "2");
+            var ttl = document.createElement('div')
+            ttl.setAttribute('class', 
+            'total-price')
+            var total = document.createElement('table')
+            total.setAttribute('id', "total")
+            var totalBdy = document.createElement('tbody')
+            for (var i = 0; i < 3; i++)
+            {
+               var row = document.createElement('tr')
+               for (var j = 0; j < 2; j++)
+               {
+                  var cell = document.createElement('td')
+                  if(i === 0)
+                  {
+                     if(j === 0)
+                     {
+                        var h1 = document.createElement('h4')
+                        h1.textContent = "Total: "
+                        cell.append(h1)
+                     }
+                     else{
+                        cell.setAttribute('id', 'priceTotal')
+                        var p1 = document.createElement('p')
+                        
+                        p1.textContent = parseFloat(mytotal).toFixed(2)
+                        cell.append(p1)
+                     }
+                     row.append(cell)
+                  }
+                  totalBdy.append(row)
+               }
+               total.append(totalBdy)
+            }
+            ttl.append(total)
+            body.append(total)
+            var checkoutDiv = document.createElement('div')
+            checkoutDiv.setAttribute('style', 'text-align:center;')
+            var checkout = document.createElement('a')
+            checkout.setAttribute('href', 'checkout.html')
+            checkout.setAttribute('onClick', 'setTotal()')
+            checkout.textContent = "Proceed to Checkout"
+            checkout.style = "color: white; text-align: center;"
+            checkoutDiv.append(checkout)
+            body.append(checkoutDiv)
+         }
+   </script>
+   <script>
+      function setTotal()
+      {
+         var total = document.getElementById('priceTotal').textContent
+         localStorage.setItem('total', total)
+      }
+   </script>
+   <script>
+      $(document).ready(function () {
+            $(".inputButton").change(function () {
+               updateQuantity(this);
+            });
+
+            $(".removeButton").click(function(){
+               var productRow = $(this).parent().parent()
+               var productRowIndex = $("tr").index(productRow)
+
+               var priceTotal = parseFloat(document.getElementById('priceTotal').textContent)
+               var price = parseFloat(productRow.children('.pricetd').children('.price').text())
+               var newTotal = priceTotal - price
+               document.getElementById('priceTotal').textContent = newTotal.toFixed(2)
+
+               $(this).closest('tr').remove();
+               var cartItems = JSON.parse(localStorage.getItem('cartItems'))
+               cartItems.splice(productRowIndex, 1)
+               var json = JSON.stringify(cartItems)
+               localStorage.setItem('cartItems', json)
+               let numCart = localStorage.getItem('numCart')
+               numCart = parseFloat(numCart) - 1
+               localStorage.setItem('numCart', numCart)
+               setNumCart()
+            })
+            function updateQuantity(quantityInput){
+               let myQuant = parseInt($(quantityInput).val())
+               if (myQuant > 0)
+               {
+                  var productRow = $(quantityInput).parent().parent();
+                  var price = parseFloat(productRow.children('.description').children(".originalPrice").text().substring(8));
+                  var currentPrice = parseFloat(productRow.children('.pricetd').children('.price').text())
+                  var linePrice = price * myQuant;
+                  var differenceInPrice = linePrice - currentPrice
+                  productRow.children('.pricetd').children('.price').html(linePrice.toFixed(2))
+
+                  $(quantityInput).val(myQuant)
+                  var cartItems = JSON.parse(localStorage.getItem('cartItems'))
+                  var productRowIndex = $("tr").index(productRow)
+                  cartItems[productRowIndex].quantity = myQuant
+
+                  var priceTotal = parseFloat(document.getElementById('priceTotal').textContent)
+                  var newTotal = priceTotal + differenceInPrice
+                  document.getElementById('priceTotal').
+                     textContent = newTotal.toFixed(2)
+               }
+               else
+               {
+                  $(quantityInput).val(1)
+               }
+               
+            }
+         });
+   </script>
+   <script>
+      function setNumCart() {
+         var big = document.getElementsByClassName('centered')[1]
+         var small = document.getElementsByClassName('centered')[0]
+         big.textContent = localStorage.getItem('numCart')
+         small.textContent = localStorage.getItem('numCart')
+      }
+   </script>
+</head>
+<body style="color: white;" onload="generateTable(); setNumCart()">
+   <img class="bg" src="images/DonLogo.png" alt="logo">
+   <div class="header">
+      <div class="topnav-left">
+         <a href="index.html"><img src="images/DonLogo.png" alt="don logo" style="width: 100%;"></a>
+         <h1 style="color: rgb(100, 94, 94); ">THEDon543</h1>
+      </div>
+      <div>
+         <div class="topnav-right">
+            <a href="index.html" style="color: rgb(130, 129, 129);">Welcome</a>
+            <a href="apparel.html" style="color: rgb(130, 129, 129);">The Drip</a>
+            <a href="aboutme.html" style="color: rgb(130, 129, 129);">The Don Squad</a>
+            <a href="theinfo.html" style="color: rgb(130, 129, 129);">The Info</a>
+            <div class="cart-container-1">
+               <a href="cart.html"><img class="cart" src='images/shopping-cart-icon-vector-12712482.png' alt=""
+                     width="100%" style="object-fit: cover; display: inline-block;"></a>
+               <a href="cart.html" class="centered"></a>
+   
+            </div>
+            <a target="_blank" href="https://www.instagram.com/accounts/login/?next=/thedon543yt/"><img width="25"
+                  src="images/Instagram_logo_2016.svg.png" alt="instagram"></a>
+            <a href="https://www.youtube.com/c/THEdon543"><img src="images/youtube.png" alt="youtube logo" width="25"></a>
+         </div>
+         <div class="small-topnav-right">
+            <div class="cart-container">
+               <a href="cart.html"><img class="cart" src='images/shopping-cart-icon-vector-12712482.png' alt=""
+                     height="50px" style="object-fit: cover; display: inline-block;"></a>
+               <a href="cart.html" class="centered"></a>
+   
+            </div>
+            <div class="dropdown">
+               <button class="dropbtn">More</button>
+               <div class="dropdown-content">
+                  <a href="index.html" style="color: rgb(130, 129, 129);">Welcome</a>
+                  <a href="apparel.html" style="color: rgb(130, 129, 129);">The Drip</a>
+                  <a href="aboutme.html" style="color: rgb(130, 129, 129);">The Don Squad</a>
+                  <a href="theinfo.html" style="color: rgb(130, 129, 129);">The Info</a>
+                  <a target="_blank" href="https://www.instagram.com/accounts/login/?next=/thedon543yt/"><img width="25"
+                        src="images/Instagram_logo_2016.svg.png" alt="instagram"></a>
+                  <a href="https://www.youtube.com/c/THEdon543"><img src="images/youtube.png" alt="youtube logo"
+                        width="25"></a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <br>
+   <br>
+   <h1 style="text-align: center;">Shopping Cart</h1>
+   <!-- <div class="cart-page"> -->
+   <!-- <table>
+      <tr>
+         <th>
+            Products
+         </th>
+         <th>Quantity</th>
+         <th>Subtotal</th>
+      </tr>
+         <td>
+            <div class="cart-info">
+               <img src="images/donHoodie.jpeg" alt="">
+               <div>
+                  <p>
+                     Red
+                     Printed Shirt
+                  </p>
+                  <small>Price: $50.00 </small>
+                  <a href="remove"></a>
+               </div>
+            </div>
+         </td>
+         <td><input type="number" value="1"></td>
+         <td>$Price</td>
+   </table>
+   </div>
+   <div class="total-price">
+      <table>
+         <tr>
+            <td>
+               Subtotal
+            </td>
+            <td>200.00</td>
+         </tr>
+         <tr>
+            <td>tax</td>
+            <td>35.00</td>
+         </tr>
+         <tr>
+            <td>total</td>
+            <td>235.00</td>
+         </tr>
+      </table> -->
+   <!-- </div>  -->
+</body>
+</html>
