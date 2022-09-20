@@ -14,8 +14,6 @@ int main()
     int player;
     char answer = 'y';
 
-
-
     for (int i=0; i<8; i++)
  		{
    	   		for (int j=0; j <8; j+=2)
@@ -222,7 +220,7 @@ int main()
  	    {
    	   		for (int j=0; j <8; j++)
        		{
-           		cout << setw(100) << board[i][j];
+           		cout << board[i][j];
        		}
        		cout << endl;
 
