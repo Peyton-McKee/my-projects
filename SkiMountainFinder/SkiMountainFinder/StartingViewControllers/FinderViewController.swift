@@ -9,7 +9,7 @@ import UIKit
 import WebKit
 
 class FinderViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-    //    @IBOutlet var startDatePicker: UIDatePicker!
+        @IBOutlet var startDatePicker: UIDatePicker!
     
     @IBOutlet weak var imageView : UIImageView!
     
@@ -117,6 +117,7 @@ class FinderViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         else
         {
             return dates[row].formatted(date: .abbreviated, time: .omitted)
+            return ""
         }
     }
     

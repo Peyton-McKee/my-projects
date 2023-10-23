@@ -76,8 +76,5 @@ func getWebsiteData(webView: WKWebView, completion: @escaping (Result<String, Er
 
 func parseCode(code: String, key: String) -> String
 {
-    print("Initial String: " + code.lowercased().components(separatedBy: key)[1] + " end statement")
-    print("heres the key: " + key)
-    print("Look here: " + String(code.lowercased().components(separatedBy: key)[1]).components(separatedBy: "=")[0] + " End Statement")
     return code.lowercased().components(separatedBy: key)[0].components(separatedBy: "=")[code.lowercased().components(separatedBy: key)[0].components(separatedBy: "=").count-1] + code.lowercased().components(separatedBy: key)[1].components(separatedBy: "<")[code.lowercased().components(separatedBy: key)[1].components(separatedBy: "<").count-1]
 }
